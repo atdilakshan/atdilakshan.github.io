@@ -1,0 +1,137 @@
+:root{
+    --themecolor: #fff;
+    --themebg: red;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+.max-width{
+    max-width: 1300px;
+    padding: 0 80px;
+    margin: auto;
+}
+
+nav{
+    background-color: #000;
+    padding: 1%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+nav .max-width{
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+nav .brand{
+    margin-right: auto !important;
+}
+
+nav .brand a{
+    text-decoration: none;
+    font-size: 35px;
+    color: var(--themecolor);
+}
+
+nav ul{
+    list-style: none;
+}
+
+nav ul li{
+    display: inline-block;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 800;
+    margin-left: 30px;
+    transition: color 0.3s ease;
+    position: relative;
+}
+
+nav .navbar-collapse{
+    color: #fff;
+    font-size: 30px;
+    display: none;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+header{
+    background: url("/home/ukistu17/Documents/Dilakshan/atdilakshan.github.io/images/banner.jpg") no-repeat center;
+    min-height: 500px;
+    height: 100vh;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+@media (max-width: 2560px) and (min-width: 1854px){
+    .max-width{
+        max-width: 2300px;
+        padding: 0 30px;
+    }
+
+    nav{
+        padding: 20px 0;
+    }
+    
+    nav .brand a{
+        font-size: 60px;
+    }
+
+    nav ul li a{
+        font-size: 45px;
+        margin-left: 70px;
+    }
+
+}
+
+@media (max-width:991px){
+    nav .navbar-collapse{
+        display: block;
+    }
+    
+    nav ul{
+        background-color: red;
+        position: fixed;
+        height: 100vh;
+        width: 100%;
+        top: 0;
+        left: -100%;
+        text-align: center;
+        transition: all 0.3s ease;
+    }
+
+    nav ul.active{
+        left: 0;
+    }
+
+    nav ul li{
+        display: block;
+        margin: 20px 0;
+    }
+
+    nav .navbar-collapse i.active::before{
+        content: "\f00d";
+    }
+
+}
+
+@media(max-width: 425px){
+    nav .brand a{
+        font-size: 18px;
+    }
+}
