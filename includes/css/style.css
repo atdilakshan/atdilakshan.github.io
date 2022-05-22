@@ -132,6 +132,11 @@ header{
 
 @media(max-width: 425px){
     nav .brand a{
-        font-size: 18px;
+        font-size: 20px;
+    }
+
+    .max-width{
+        max-width: 500px;
+        padding: 0 10px;
     }
 }
